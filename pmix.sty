@@ -1014,6 +1014,19 @@
 \usemintedstyle{default}
 \usepackage{xcolor}
 
+\usepackage{xpatch}
+\makeatletter
+% replace executable python with python3
+\xpatchcmd\minted@pygmentize
+  {python -c}
+  {python3 -c}
+  {}{\fail}
+\xpatchcmd\minted@autogobble
+  {python -c}
+  {python3 -c}
+  {}{\fail}
+\makeatother
+
 % Background: Light Gray
 \definecolor{pmixbg}{rgb}{0.95,0.95,0.95}
 % Highlight: Yellow
