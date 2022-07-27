@@ -1194,7 +1194,7 @@ Architecture flag.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%% History: Version 4.1
-\section{Version 4.1: TBD}
+\section{Version 4.1: Oct. 2021}
 
 The v4.1 update includes clarifications and corrections from the v4.0 document:
 
@@ -1437,20 +1437,23 @@ The following macros were deprecated in v4.2:
 % sections.  Most recently though we used present tense (4.2)
 
 \begin{compactitemize}
-  \item Added example codes hello.py and hello.c
-  \item Clarify three roles of consumers of the PMIx interface #327
-  \item Add appendix with use case descriptions #328 #349 #357
-  \item Clarifications to Terms and Conventions chapter andd addition of new term definitions. %  #347 #376 - dsolt
-  \item Re-organized the presentation data access, syncronization, reserved keys and non-reserved keys. - #??? - dsolt
+  \item First release prepared using procedures defined in the PMIx
+    Governance document
+  \item Added specific values to constant definitions to ensure
+    consistency across implementations
+  \item Added Use-Cases appendix with descriptions for Business Card
+    Exchange, Debugging, Hybrid Applications, MPI Sessions, and
+    Cross-Version Compatibility
+  \item Added guidance on how PMIx defines an Application Binary Interface (ABI)
+  \item Added ABI query attributes
+  \item Added example C and Python PMIx client codes in sources/ directory
+  \item Clarified three roles of consumers of the PMIx interface \#327
+  \item Clarify when PMIX_PARENT_ID attribute is provided. % \#376 - dsolt
+  \item Clarify value of PMIX_CMD_LINE attribute in spawn case. % \#377 - dsolt
+  \item Clarifications to Terms and Conventions chapter and addition of additional term definitions. %  #347 #376 - dsolt
+  \item Re-organized the presentation data access, syncronization, reserved keys and non-reserved keys. % \#405 \#175 - dsolt
+  \item Made presentation of return values consistent across APIs % \#350 - dsolt
   \item Attributes supported by PRRTE are not longer color coded.  Refer to PRRTE documentation to see what is supported for a particular PRRTE version. % - dsolt
-  \item Made presentation of return values consistent across APIs % #350 - dsolt
-  \item Fix cut/paste issue with PMIX_DATA_ARRAY_DESTRUCT #355
-  \item Assign specific values to constants #359 #394
-  \item Clarify when PMIX_PARENT_ID attribute is provided. % #376 - dsolt
-  \item Clarify value of PMIX_CMD_LINE attribute in spawn case. % #377 - dsolt
-  \item Clarifications to Data Access Operations chapter #405 #175
-  \item Added Application Binary Interface (ABI) guidance #375
-  \item Add ABI query attributes #397
 \end{compactitemize}
 
 %
@@ -1458,7 +1461,12 @@ The following macros were deprecated in v4.2:
 %
 %\subsection{Added Constants}
 %
-%\subsection{Added Attributes}
+\subsection{Added Attributes}
+
+\littleheader{ABI attributes}
+\pasteAttributeItem{PMIX_QUERY_STABLE_ABI_VERSION}
+\pasteAttributeItem{PMIX_QUERY_PROVISIONAL_ABI_VERSION}
+
 %
 %\subsection{Added Macros}
 %
