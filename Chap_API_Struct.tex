@@ -87,8 +87,8 @@ A \ac{PMIx} implementation must define all of the return status constants define
 \adviceimplend
 
 \adviceuserstart
-# SOLT: TODO: Isn't this wrong now?  I think this is referring to implementation specific error codes (because it says greater than PMIX_EXTERNAL_ERR_BASE), but 
-it doesn't say that.
+% SOLT: TODO: Isn't this wrong now?  I think this is referring to implementation specific error codes (because it says greater than PMIX_EXTERNAL_ERR_BASE), but 
+% it doesn't say that.
 Other than \refconst{PMIX_SUCCESS} (which is required to be zero), the integer value of any \ac{PMIx} error constant is left to the \ac{PMIx} library implementer with the constraint that it be negative and greater magnitude (i.e. of larger absolute value) 
 than
 \refconst{PMIX_EXTERNAL_ERR_BASE}.
